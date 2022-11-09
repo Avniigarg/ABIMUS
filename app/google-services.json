@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "999721396525",
+    "project_id": "animus-7beec",
+    "storage_bucket": "animus-7beec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999721396525:android:fee1f7d760dfe184f74ba4",
+        "android_client_info": {
+          "package_name": "com.avnigarg.animus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999721396525-4ttmbkhsog0rpac9phhmqliaq5500834.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXkURxdslL6LtvW0MzxCKMnImct8NqcGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999721396525-4ttmbkhsog0rpac9phhmqliaq5500834.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
