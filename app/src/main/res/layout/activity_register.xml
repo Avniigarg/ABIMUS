@@ -97,31 +97,6 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/regphlayout"
-        android:layout_width="345dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Phone Number"
-        app:boxBackgroundMode="outline"
-        app:boxStrokeColor="@color/sec"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/sec"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regpasslayout"
-        app:startIconDrawable="@android:drawable/stat_sys_phone_call"
-        app:startIconTint="@color/sec">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/regphtext"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="phone" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -134,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regphlayout" />
+        app:layout_constraintTop_toBottomOf="@+id/regpasslayout" />
 
     <TextView
         android:id="@+id/tologinpage"
@@ -155,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/sec"
         android:visibility="invisible"
