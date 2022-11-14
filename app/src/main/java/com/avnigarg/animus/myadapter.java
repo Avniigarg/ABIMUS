@@ -1,12 +1,14 @@
 package com.avnigarg.animus;
 
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -28,17 +30,26 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
         holder.sciname.setText(model.getSciname());
         holder.type.setText(model.getType());
         Glide.with(holder.img.getContext()).load(model.getPhoto()).into(holder.img);
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            String st= (String) holder.sciname.getText();
-//            @Override
-//            public void onClick(View view) {
-//                Bundle bd =new Bundle();
-//                bd.putString("name", st);
-//                Toast.makeText(view.getContext(), "clicked"+st, Toast.LENGTH_SHORT).show();
-//                AppCompatActivity activity = new AppCompatActivity();
-//                activity.getSupportFragmentManager().beginTransaction().replace(R.id.container, OpenFragment.class, bd ).commit();
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bd =new Bundle();
+                bd.putString("name", model.getName().toString());
+                bd.putString("sciname", model.getSciname().toString());
+                bd.putString("photo",model.getPhoto());
+                bd.putString("type",model.getType());
+                bd.putString("desc",model.getDesc());
+
+                OpenFragment openFragment = new OpenFragment();
+                openFragment.setArguments(bd);
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.container,openFragment).addToBackStack(null).commit();
+
+
+
+            }
+        });
 
     }
 
